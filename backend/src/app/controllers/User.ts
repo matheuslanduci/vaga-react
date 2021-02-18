@@ -30,9 +30,9 @@ class UserController {
   }
 
   public async store(req: Request, res: Response) {
-    const { username, password } = req.body;
+    const { username, password, photo } = req.body;    
 
-    const user = users.find(user => user.username === username);
+    const user = users.find(user => user.username === username);    
 
     if (user) {
       return res
@@ -40,9 +40,9 @@ class UserController {
         .json({ error: "Já existe um usuário com este nome. " });
     }
 
-    //parseImage(req, res);
+    parseImage(photo, username);
 
-    const newPassword = await generatePassword(password);
+    const newPassword = generatePassword(password);
 
     users.push({
       id: v4(),

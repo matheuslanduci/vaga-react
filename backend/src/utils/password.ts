@@ -1,7 +1,7 @@
 import bcrypt from "bcryptjs";
 
 export function generatePassword(password: string) {
-  return bcrypt.hash(password, 8);
+  return bcrypt.hashSync(password, 8);
 }
 
 export function comparePassword(password: string, hash: string) {
