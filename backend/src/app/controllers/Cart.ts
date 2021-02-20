@@ -1,7 +1,18 @@
 import { Request, Response } from "express";
+import { v4 } from "uuid";
 
 import { users, products, Products } from "../../../data";
-import { ResponseProducts } from "./Product";
+
+type ResponseProduct = {
+  id: string;
+  id_item: string;
+  name: string;
+  rating: number;
+  price: number;
+  photo: string;
+};
+
+type ResponseProducts = ResponseProduct[];
 
 class CartController {
   public async index(req: Request, res: Response) {
@@ -12,10 +23,10 @@ class CartController {
     const prods: ResponseProducts = [];
 
     user?.cart.forEach(item => {
-      cartProducts.push(products.find(prod => prod.id === item)!);
+      cartProducts.push(products.find(prod => prod.id === item.id_item)!);
     });
 
-    cartProducts.forEach(product => {
+    cartProducts.forEach((product, idx) => {
       let rating = 0;
 
       product.comments.forEach(comment => (rating += comment.rating));
@@ -23,7 +34,8 @@ class CartController {
       rating /= product.comments.length;
 
       prods.push({
-        id: product.id,
+        id: user?.cart[idx].id!,
+        id_item: product.id,
         name: product.name,
         rating: rating || 0,
         price: product.price,
@@ -40,7 +52,7 @@ class CartController {
 
     const user = users.find(user => user.username === username);
 
-    user?.cart.push(productId);
+    user?.cart.push({ id: v4(), id_item: productId });
 
     return res.json({ message: "Produto adicionado com sucesso ao carrinho!" });
   }
@@ -51,7 +63,9 @@ class CartController {
 
     const user = users.find(user => user.username === username);
 
-    user?.cart.filter(item => item !== productId);
+    if (user) {
+      user.cart = user?.cart.filter(item => item.id !== productId);
+    }    
 
     return res.json({ message: "Produto removido com sucesso ao carrinho!" });
   }

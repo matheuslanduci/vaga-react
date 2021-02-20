@@ -24,7 +24,9 @@ routes.put("/profile", ProfileController.update);
 
 routes.use(
   "/public",
-  express.static(path.join(__dirname, "..", "..", "..", "public", "uploads"))
+  express.static(
+    path.join(__dirname, "..", "..", "..", "..", "public", "uploads")
+  )
 );
 
 export default routes;

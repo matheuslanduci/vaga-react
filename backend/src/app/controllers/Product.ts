@@ -2,7 +2,7 @@ import { Request, Response } from "express";
 
 import { Products, products } from "../../../data";
 
-type ResponseProduct = {
+type ResponseProduct = {  
   id: string;
   name: string;
   rating: number;
@@ -52,6 +52,7 @@ class ProductController {
   }
 
   public async show(req: Request, res: Response) {
+    const prods: ResponseProducts = [];
     const { id } = req.params;
 
     const product = products.find(prod => prod.id === id);
@@ -66,7 +67,23 @@ class ProductController {
       prod => prod.label === product.label && prod.id !== product.id
     );
 
-    return res.json({ product, otherProducts });
+    otherProducts.forEach(product => {
+      let rating = 0;
+
+      product.comments.forEach(comment => (rating += comment.rating));
+
+      rating /= product.comments.length;
+
+      prods.push({
+        id: product.id,
+        name: product.name,
+        rating: rating || 0,
+        price: product.price,
+        photo: product.photos[0]
+      });
+    });
+
+    return res.json({ product, otherProducts: prods });
   }
 }
 

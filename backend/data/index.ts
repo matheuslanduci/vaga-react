@@ -1,8 +1,15 @@
+type CartItem = {
+  id: string;
+  id_item: string;
+}
+
+type CartItems = CartItem[];
+
 type User = {
   id: string;
   username: string;
   password: string;
-  cart: string[];
+  cart: CartItems;
 };
 
 type Users = User[];
@@ -36,7 +43,7 @@ export const products: Products = [
       "Touca De Lã Gorro Toca Beanie Unissex - Disponível apenas na cor Preta",
     price: 20.0,
     photos: [
-      "images-na.ssl-images-amazon.com/images/I/516RQF7UAFL._AC_SX679_.jpg",
+      "https://images-na.ssl-images-amazon.com/images/I/516RQF7UAFL._AC_SX679_.jpg",
       "https://images-na.ssl-images-amazon.com/images/I/41GYXWCARBL._AC_.jpg"
     ],
     label: "Roupas",
@@ -131,7 +138,7 @@ export const products: Products = [
     ]
   },
   {
-    id: "a37b040f-c555-4206-b275-342f507976eb",
+    id: "db2b3eb7-258b-4fe0-a8bc-ab35cde3869a",
     name: "Fogão Atlas 4 Bocas",
     description:
       "Fogão Atlas 4 Bocas preto Mônaco Top Glass com Acendimento automático - Bivolt",
@@ -211,7 +218,7 @@ export const products: Products = [
     ]
   },
   {
-    id: "a37b040f-c555-4206-b275-342f507976eb",
+    id: "18647119-03b3-408f-a606-59c96cd8042d",
     name: "Espátula de Inox Prática para Massas e Legumes,",
     description:
       "Ideal para cortar, separar, raspar e organizar durante o preparo de massas, legumes e confeitaria. Com régua gravada com medidas em centímetros e milímetros para auxiliar as medidas dos cortes. Feita em aço inoxidável, fácil de limpar e resistente. Dimensões: 11,5 cm x 15 cm x 2,5 cm. Deixa a cozinha mais prática",
