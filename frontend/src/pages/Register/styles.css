@@ -1,0 +1,92 @@
+#register-page {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+}
+
+.register-content {
+  margin-top: 76px;
+
+  width: 593px;
+
+  display: flex;
+}
+
+.register-form-wrapper {
+  width: 372px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.register-form-wrapper .register-title {
+  margin-bottom: 36px;
+
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 33px;
+  text-transform: uppercase;
+}
+
+.register-form-wrapper .register-form {
+  width: 260px;
+}
+
+.register-form .input-group {
+  margin-bottom: 32px;
+}
+
+.register-form .input-button {
+  margin-bottom: 16px;
+}
+
+.register-form-wrapper .register-redirect {
+  font-size: 18px;
+  line-height: 25px;
+  text-align: center;
+}
+
+.register-form-wrapper .register-redirect a {
+  color: #000;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.register-photo {
+  position: relative;
+
+  margin-top: 69px;
+  margin-left: 16px;
+
+  width: 208px;
+  height: 208px;
+
+  border: 1px solid #000;
+  border-radius: 4px;
+}
+
+.register-photo img {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.register-photo span {
+  position: absolute;
+  top: 83px;
+  left: 0;
+
+  width: 100%;
+
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;  
+  text-align: center;
+}

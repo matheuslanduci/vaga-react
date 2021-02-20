@@ -1,0 +1,42 @@
+#success-page {
+  width: 100%;
+}
+
+.success-wrapper {
+  margin-top: 64px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background: url("assets/background-payment.svg");  
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.success-wrapper h1 {
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 57px;
+  text-transform: uppercase;
+}
+
+.success-circle {
+  margin-top: 16px;
+
+  width: 196px;
+  height: 196px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #76de98;
+  border-radius: 50%;
+}
+
+.success-button {
+  margin-top: 164px;
+
+  width: 260px;
+}

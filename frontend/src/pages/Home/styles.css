@@ -1,0 +1,58 @@
+#home-page {
+  position: relative;
+  width: 100%;
+}
+
+.side-left {
+  position: absolute;
+  top: 101px;
+  left: 56px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.info-text {
+  margin-top: 64px;
+
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 25px;
+  text-transform: uppercase;
+}
+
+.content {
+  position: absolute;
+  top: 143px;
+  right: 49px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content h2 {
+  font-size: 23px;
+  font-weight: 400;
+  line-height: 32px;
+  text-transform: uppercase;
+}
+
+.content h1 {
+  margin: 8px 0;
+
+  font-size: 58px;
+  font-weight: 700;
+  line-height: 81px;
+  text-transform: uppercase;
+}
+
+.content a {
+  margin-top: 32px;
+
+  max-width: 397px;
+  height: 36px;
+
+  border-radius: 18px;
+}

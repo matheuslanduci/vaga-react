@@ -1,0 +1,40 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;  
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+
+#container {
+  margin: 0 auto;
+
+  width: 1088px;
+}
+
+/* 
+CSS Pattern {
+  position: value;
+  top: value;
+  right: value;
+  bottom: value;
+  left: value;
+  
+  margin: value;
+  padding: value;
+
+  width: value;
+  height: value;
+
+  display: value;
+  // any other property derived from display: value - e.g., flex-direction or grid-template-areas; 
+
+  then any properties in alphabetical order.
+}
+*/

@@ -1,0 +1,157 @@
+#product-page {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.product-wrapper-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-container {
+  margin-top: 42px;
+
+  display: flex;
+}
+
+.product-images-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-main-image {
+  width: 240px;
+  height: 240px;
+
+  border: 1px solid #000;
+  object-fit: cover;
+}
+
+.product-images-row {
+  margin-top: 12px;
+
+  display: flex;
+}
+
+.product-option-image {
+  margin-right: 8px;
+
+  width: 64px;
+  height: 64px;
+
+  border: 1px solid #000;
+  cursor: pointer;
+  object-fit: cover;
+  opacity: 0.4;
+}
+
+.product-option-image.active {
+  opacity: 1;
+}
+
+.product-rating {
+  margin-top: 32px;
+
+  display: flex;
+  align-items: center;
+
+  font-size: 31px;
+  font-weight: 500;
+  line-height: 44px;
+}
+
+.product-rating svg {
+  margin-right: 8px;
+}
+
+.product-content {
+  margin-left: 64px;
+
+  width: 460px;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.product-content .product-name {
+  width: 100%;
+  max-height: 33px;
+
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 33px;
+}
+
+.product-content .product-description {
+  margin-top: 16px;
+
+  font-size: 18px;
+  line-height: 27px;
+  white-space: normal;
+}
+
+.product-content .product-price {
+  margin-top: 32px;
+
+  display: block;
+
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 45px;
+}
+
+.product-content .product-installments {
+  font-size: 18px;
+  line-height: 25px;
+}
+
+.product-content .product-installments .price {
+  font-weight: 700;
+}
+
+.product-cart-button {
+  margin-top: 48px;
+
+  border-radius: 0;
+}
+
+.comment-list {
+  margin-top: 38px;
+  width: 764px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.comment-list .product-comment {
+  margin-bottom: 16px;
+}
+
+.product-others-container {
+  margin-top: 55px;
+
+  width: 210px;
+}
+
+.product-others-container .product-others-title {
+  margin-bottom: 2px;
+
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 25px;
+  text-transform: uppercase;
+}
+
+.product-others-list {
+  margin-top: 8px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.product-others-list .product-item-grid-wrapper {
+  margin-bottom: 16px;
+}

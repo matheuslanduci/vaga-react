@@ -1,0 +1,167 @@
+#payment-page {
+  width: 100%;
+
+  display: flex;
+}
+
+.payment-selector-wrapper {
+  margin-top: 56px;
+
+  width: 460px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.payment-selector {
+  padding-right: 16px;
+  padding-left: 8px;
+
+  width: 100%;
+  height: 54px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border: 1px solid #000;
+  border-bottom: 0;
+}
+
+.payment-selector#credito {
+  border-bottom: 1px solid #000;
+}
+
+.payment-selector#credito.active {
+  border-bottom: 0;
+}
+
+.payment-selector span {
+  display: flex;
+  align-items: center;
+
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 25px;
+  text-transform: uppercase;
+}
+
+.payment-selector span svg {
+  margin-right: 8px;
+}
+
+.payment-content {
+  display: none;
+
+  width: 100%;
+
+  border-top: 1px solid #000;
+}
+
+.payment-content#boleto {
+  height: 208px;
+
+  display: none;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #000;
+  border-top: 0;
+  border-bottom: 0;
+  overflow: hidden;
+}
+
+.payment-content.active#boleto {
+  display: flex;
+}
+
+.payment-content#credito {
+  height: 366px;
+
+  display: none;  
+  justify-content: center;
+
+  border: 1px solid #000;
+  border-top: 0;
+  border-bottom: 0;
+  overflow: hidden;
+}
+
+.payment-content.active#credito {
+  display: flex;
+
+  border-bottom: 1px solid #000;
+}
+
+.payment-content#boleto button {
+  max-width: 333px;
+  height: 128px;
+
+  border-radius: 8px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.payment-content#credito form {
+  margin-top: 18px;
+
+  width: 396px;
+
+  display: flex;  
+  flex-direction: column;
+}
+
+.payment-content#credito form .form-input {
+  margin-bottom: 12px;
+
+  border-radius: 0;
+}
+
+.payment-content#credito form .form-group {
+  display: flex;
+}
+
+.payment-content#credito form .form-group .date {
+  width: 206px;
+}
+
+.payment-content#credito form .form-group .cvv {
+  margin-left: 8px;
+  padding: 0 16px;
+
+  width: 98px;
+
+  border: 1px solid #000;
+  font-size: inherit;
+}
+
+.payment-content#credito form .form-group .cvv::placeholder {
+  color: #000;
+  font-size: inherit;
+}
+
+.payment-content#credito form .form-info {
+  margin-top: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.payment-content#credito form .form-info svg {
+  margin-right: 12px;
+}
+
+.payment-content#credito form .form-button {
+  margin-top: 32px;
+
+  border-radius: 0;
+}
+
+.payment-asset {
+  margin-top: 119px;
+  margin-left: 142px;
+}

@@ -1,0 +1,55 @@
+#login-page {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+}
+
+.login-content {
+  margin-top: 76px;
+
+  width: 777px;
+
+  display: flex;
+}
+
+.login-content .login-form-wrapper {
+  width: 380px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-form-wrapper .login-title {
+  margin-bottom: 36px;
+
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 33px;
+  text-transform: uppercase;
+}
+
+.login-form-wrapper .login-form {
+  width: 260px;
+}
+
+.login-form .input-group {
+  margin-bottom: 32px;
+}
+
+.login-form-wrapper .login-redirect {
+  font-size: 18px;
+  line-height: 25px;
+}
+
+.login-form-wrapper .login-redirect a {
+  color: #000;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.login-content .login-asset {
+  margin-top: 84px;
+  margin-left: 64px;
+}
